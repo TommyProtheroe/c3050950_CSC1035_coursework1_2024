@@ -13,5 +13,26 @@ public class CarModel {
         this.number_sold = number_sold;
         this.type = type;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getSalesPrice() {
+        return sales_price;
+    }
+
+    public int getNumberSold() {
+        return number_sold;
+    }
+
+    public String getType() {
+        return type;
+    }
+
 }
 
