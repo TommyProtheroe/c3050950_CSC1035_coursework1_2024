@@ -18,6 +18,9 @@ public class Manufacturer {
     }
 
     public CarModel getMostExpensiveCar() {
+        if (carModels.isEmpty()) {
+            return null;
+        }
     }
 
 
