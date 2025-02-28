@@ -2,15 +2,15 @@ public class CarModel {
 
     private String name;
     private double weight;
-    private double sales_price;
-    private int number_sold;
+    private double salesPrice;
+    private int numberSold;
     private String type;
 
-    public CarModel(String name, double weight, double sales_price, int number_sold, String type) {
+    public CarModel(String name, double weight, double salesPrice, int numberSold, String type) {
         this.name = name;
         this.weight = weight;
-        this.sales_price = sales_price;
-        this.number_sold = number_sold;
+        this.salesPrice = salesPrice;
+        this.numberSold = numberSold;
         this.type = type;
     }
 
@@ -23,11 +23,11 @@ public class CarModel {
     }
 
     public double getSalesPrice() {
-        return sales_price;
+        return salesPrice;
     }
 
     public int getNumberSold() {
-        return number_sold;
+        return numberSold;
     }
 
     public String getType() {
