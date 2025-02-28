@@ -9,4 +9,12 @@ public class Manufacturer {
         this.make = make;
     }
 
+    public String getMake() {
+        return make;
+    }
+
+    public List<CarModel> getCarModels() {
+        return carModels;
+    }
+
 }
