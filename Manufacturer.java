@@ -21,6 +21,11 @@ public class Manufacturer {
         if (carModels.isEmpty()) {
             return null;
         }
+
+        CarModel mostExpensive = carModels.get(0);
+
+        for (int i = 1; i < carModels.size(); i++) {
+        }
     }
 
 
