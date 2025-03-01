@@ -1,15 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ReportingIO {
     private Reporting reporting = new Reporting();
     private Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) { // Method must be inside the class
+    public static void main(String[] args) {
         ReportingIO reportingIO = new ReportingIO();
         reportingIO.runMenu();
     }
 
-    public void runMenu() { // Method must also be inside the class
+    public void runMenu() {
         while (true) {
             System.out.println("\nCar Investor Reporting System");
             System.out.println("1. Enter Manufacturer Data");
@@ -49,9 +51,6 @@ public class ReportingIO {
             case 5:
                 generateReports();
                 break;
-            case 6:
-                System.out.println("Exiting program...");
-                break;
             default:
                 System.out.println("Invalid option. Please try again.");
                 break;
@@ -90,13 +89,15 @@ public class ReportingIO {
 
         System.out.print("Enter car weight (kg): ");
         double weight = scanner.nextDouble();
+        scanner.nextLine();
 
         System.out.print("Enter sales price (£): ");
         double salesPrice = scanner.nextDouble();
+        scanner.nextLine();
 
         System.out.print("Enter number sold: ");
         int numberSold = scanner.nextInt();
-        scanner.nextLine(); // Clear newline character
+        scanner.nextLine();
 
         System.out.print("Enter car type (hatchback, saloon, estate): ");
         String type = scanner.nextLine();
@@ -199,7 +200,4 @@ public class ReportingIO {
                 break;
         }
     }
-
-
-
 }
