@@ -37,5 +37,10 @@ public class Testing {
         } else {
             System.out.println("\n Test 6 Failed: No manufacturers found for this car type.");
         }
+
+        List<CarModel> expensiveCars = reporting.getAllCarModelsAbovePrice(20000);
+        System.out.println("\n Test 7 Passed: Car Models Above £20000:");
+        for (CarModel c : expensiveCars) {
+            System.out.println("- " + c.getName() + " (£" + c.getSalesPrice() + ")");
     }
 }
