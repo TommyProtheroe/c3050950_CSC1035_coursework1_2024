@@ -107,6 +107,12 @@ public class ReportingIO {
         System.out.println("Car model added: " + modelName + " to manufacturer " + make);
     }
 
+    public void listManufacturers() {
+        if (reporting.getManufacturers().isEmpty()) {
+            System.out.println("No manufacturers available.");
+            return;
+        }
+    }
 
 
 
