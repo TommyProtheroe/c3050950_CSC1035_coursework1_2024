@@ -31,4 +31,10 @@ public class ReportingIO {
             handleMenuChoice(choice);
         }
     }
+
+    public void handleMenuChoice(int choice) {
+        switch (choice) {
+        }
+    }
+
 }
