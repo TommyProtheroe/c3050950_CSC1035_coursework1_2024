@@ -48,9 +48,12 @@ public class Manufacturer {
 
         for (int i = 0; i < carModels.size(); i++) {
             if (carModels.get(i).getSalesPrice() > minPrice) {
+                expensiveCars.add(carModels.get(i));
             }
         }
+        return expensiveCars;
     }
+
 
 
 
