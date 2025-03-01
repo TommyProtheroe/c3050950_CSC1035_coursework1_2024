@@ -68,6 +68,10 @@ public class ReportingIO {
         System.out.println("Manufacturer added: " + make);
     }
 
+    public void enterCarModelData() {
+        System.out.print("Enter manufacturer name: ");
+        String make = scanner.nextLine();
+    }
 
 
 }
