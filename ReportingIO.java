@@ -140,7 +140,14 @@ public class ReportingIO {
             System.out.println("No car models available for " + make + ".");
             return;
         }
+
+        System.out.println("\nCar Models for " + make + ":");
+        for (int i = 0; i < manufacturer.getCarModels().size(); i++) {
+            CarModel car = manufacturer.getCarModels().get(i);
+            System.out.println("- " + car.getName() + " (£" + car.getSalesPrice() + ", " + car.getType() + ")");
+        }
     }
+
 
 
 
