@@ -38,6 +38,9 @@ public class Reporting {
         return topManufacturer;
     }
 
+    public List<CarModel> getAllCarModelsAbovePrice(double minPrice) {
+        List<CarModel> expensiveCars = new ArrayList<>();
+    }
 
 
 
