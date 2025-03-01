@@ -157,8 +157,39 @@ public class ReportingIO {
 
         int choice = scanner.nextInt();
         scanner.nextLine();
-    }
 
+        switch (choice) {
+            case 1:
+                CarModel expensiveCar = reporting.getMostExpensiveCarSold();
+                if (expensiveCar == null) {
+                    System.out.println("No car models available.");
+                } else {
+                    System.out.println("Most expensive car sold: " + expensiveCar.getName() + " (£" + expensiveCar.getSalesPrice() + ")");
+                }
+                break;
+
+            case 2:
+                System.out.print("Enter car type (hatchback, saloon, estate): ");
+                String type = scanner.nextLine();
+                Manufacturer topManufacturer = reporting.getManufacturerWithHighestRevenue(type);
+                if (topManufacturer == null) {
+                    System.out.println("No manufacturers found for that car type.");
+                } else {
+                    System.out.println("Manufacturer with highest revenue for " + type + ": " + topManufacturer.getMake());
+                }
+                break;
+
+            case 3:
+                System.out.print("Enter minimum price: ");
+                double minPrice = scanner.nextDouble();
+                scanner.nextLine();
+                break;
+
+            default:
+                System.out.println("Invalid option. Please try again.");
+                break;
+        }
+    }
 
 
 }
