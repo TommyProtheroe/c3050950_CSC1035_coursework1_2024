@@ -119,6 +119,10 @@ public class ReportingIO {
         }
     }
 
+    public void listCarModelsByManufacturer() {
+        System.out.print("Enter manufacturer name: ");
+        String make = scanner.nextLine();
+    }
 
 
 }
