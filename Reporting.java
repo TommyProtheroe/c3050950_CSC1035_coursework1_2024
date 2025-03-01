@@ -29,8 +29,15 @@ public class Reporting {
 
         for (int i = 0; i < manufacturers.size(); i++) {
             double revenue = manufacturers.get(i).getTotalRevenue(carType);
+
+            if (revenue > highestRevenue) {
+                highestRevenue = revenue;
+                topManufacturer = manufacturers.get(i);
+            }
         }
+        return topManufacturer;
     }
+
 
 
 
