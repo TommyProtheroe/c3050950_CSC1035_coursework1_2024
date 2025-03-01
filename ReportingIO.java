@@ -49,6 +49,12 @@ public class ReportingIO {
             case 5:
                 generateReports();
                 break;
+            case 6:
+                System.out.println("Exiting program...");
+                break;
+            default:
+                System.out.println("Invalid option. Please try again.");
+                break;
         }
     }
 
