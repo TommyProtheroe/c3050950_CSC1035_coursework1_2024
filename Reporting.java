@@ -23,5 +23,11 @@ public class Reporting {
         return mostExpensive;
     }
 
+    public Manufacturer getManufacturerWithHighestRevenue(String carType) {
+        Manufacturer topManufacturer = null;
+        double highestRevenue = 0.0;
+    }
+
+
 
 }
