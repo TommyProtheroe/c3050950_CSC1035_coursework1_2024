@@ -32,4 +32,9 @@ public class Manufacturer {
         return mostExpensive;
     }
 
+    public double getTotalRevenue(String carType) {
+        double totalRevenue = 0.0;
+    }
+
+
 }
