@@ -40,6 +40,10 @@ public class Reporting {
 
     public List<CarModel> getAllCarModelsAbovePrice(double minPrice) {
         List<CarModel> expensiveCars = new ArrayList<>();
+
+        for (int i = 0; i < manufacturers.size(); i++) {
+            List<CarModel> manufacturerCars = manufacturers.get(i).getCarModelsAbovePrice(minPrice);
+        }
     }
 
 
