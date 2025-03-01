@@ -183,6 +183,15 @@ public class ReportingIO {
                 System.out.print("Enter minimum price: ");
                 double minPrice = scanner.nextDouble();
                 scanner.nextLine();
+                List<CarModel> expensiveCars = reporting.getAllCarModelsAbovePrice(minPrice);
+                if (expensiveCars.isEmpty()) {
+                    System.out.println("No car models found above £" + minPrice);
+                } else {
+                    System.out.println("Car models above £" + minPrice + ":");
+                    for (int i = 0; i < expensiveCars.size(); i++) {
+                        System.out.println("- " + expensiveCars.get(i).getName() + " (£" + expensiveCars.get(i).getSalesPrice() + ")");
+                    }
+                }
                 break;
 
             default:
@@ -190,6 +199,7 @@ public class ReportingIO {
                 break;
         }
     }
+
 
 
 }
