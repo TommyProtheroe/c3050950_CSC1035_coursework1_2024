@@ -45,7 +45,13 @@ public class Manufacturer {
 
     public List<CarModel> getCarModelsAbovePrice(double minPrice) {
         List<CarModel> expensiveCars = new ArrayList<>();
+
+        for (int i = 0; i < carModels.size(); i++) {
+            if (carModels.get(i).getSalesPrice() > minPrice) {
+            }
+        }
     }
+
 
 
 
