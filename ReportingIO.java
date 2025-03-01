@@ -114,8 +114,10 @@ public class ReportingIO {
         }
 
         System.out.println("\nList of Manufacturers:");
+        for (int i = 0; i < reporting.getManufacturers().size(); i++) {
+            System.out.println("- " + reporting.getManufacturers().get(i).getMake());
+        }
     }
-
 
 
 
