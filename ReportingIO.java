@@ -61,7 +61,11 @@ public class ReportingIO {
     public void enterManufacturerData() {
         System.out.print("Enter manufacturer name: ");
         String make = scanner.nextLine();
+
+        Manufacturer manufacturer = new Manufacturer(make);
+        reporting.getManufacturers().add(manufacturer);
     }
+
 
 
 }
