@@ -58,5 +58,10 @@ public class ReportingIO {
         }
     }
 
+    public void enterManufacturerData() {
+        System.out.print("Enter manufacturer name: ");
+        String make = scanner.nextLine();
+    }
+
 
 }
