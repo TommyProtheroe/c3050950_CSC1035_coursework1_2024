@@ -42,5 +42,6 @@ public class Testing {
         System.out.println("\n Test 7 Passed: Car Models Above £20000:");
         for (CarModel c : expensiveCars) {
             System.out.println("- " + c.getName() + " (£" + c.getSalesPrice() + ")");
+        }
     }
 }
