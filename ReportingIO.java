@@ -122,7 +122,26 @@ public class ReportingIO {
     public void listCarModelsByManufacturer() {
         System.out.print("Enter manufacturer name: ");
         String make = scanner.nextLine();
+
+        Manufacturer manufacturer = null;
+        for (int i = 0; i < reporting.getManufacturers().size(); i++) {
+            if (reporting.getManufacturers().get(i).getMake().equalsIgnoreCase(make)) {
+                manufacturer = reporting.getManufacturers().get(i);
+                break;
+            }
+        }
+
+        if (manufacturer == null) {
+            System.out.println("Manufacturer not found.");
+            return;
+        }
+
+        if (manufacturer.getCarModels().isEmpty()) {
+            System.out.println("No car models available for " + make + ".");
+            return;
+        }
     }
+
 
 
 }
