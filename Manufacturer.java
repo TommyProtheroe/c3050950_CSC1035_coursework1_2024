@@ -37,8 +37,10 @@ public class Manufacturer {
 
         for (int i = 0; i < carModels.size(); i++) {
             if (carModels.get(i).getType().equals(carType)) {
+                totalRevenue += carModels.get(i).getSalesPrice() * carModels.get(i).getNumberSold();
             }
         }
+        return totalRevenue;
     }
 
 
