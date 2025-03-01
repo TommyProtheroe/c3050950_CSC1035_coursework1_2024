@@ -43,6 +43,10 @@ public class Manufacturer {
         return totalRevenue;
     }
 
+    public List<CarModel> getCarModelsAbovePrice(double minPrice) {
+        List<CarModel> expensiveCars = new ArrayList<>();
+    }
+
 
 
 }
