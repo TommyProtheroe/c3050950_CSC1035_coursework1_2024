@@ -2,15 +2,29 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The ReportingIO class provides a console-based interface for users to interact with the reporting system.
+ * It allows users to enter manufacturer and car model data, view information, and generate reports.
+ */
 public class ReportingIO {
     private Reporting reporting = new Reporting();
     private Scanner scanner = new Scanner(System.in);
 
+    /**
+     * The main method starts the program by initializing the ReportingIO system
+     * and running the menu.
+     *
+     * @param args Command-line arguments (not used).
+     */
     public static void main(String[] args) {
         ReportingIO reportingIO = new ReportingIO();
         reportingIO.runMenu();
     }
 
+    /**
+     * Displays a menu for the user to interact with the system. It continuously loops
+     * until the user selects the exit option.
+     */
     public void runMenu() {
         while (true) {
             System.out.println("\nCar Investor Reporting System");
@@ -34,6 +48,11 @@ public class ReportingIO {
         }
     }
 
+    /**
+     * Handles the user's menu selection and calls the appropriate method based on input.
+     *
+     * @param choice The menu option chosen by the user.
+     */
     public void handleMenuChoice(int choice) {
         switch (choice) {
             case 1:
@@ -57,6 +76,9 @@ public class ReportingIO {
         }
     }
 
+    /**
+     * Allows the user to enter a new manufacturer and adds it to the system.
+     */
     public void enterManufacturerData() {
         System.out.print("Enter manufacturer name: ");
         String make = scanner.nextLine();
@@ -67,6 +89,10 @@ public class ReportingIO {
         System.out.println("Manufacturer added: " + make);
     }
 
+    /**
+     * Allows the user to enter a new car model and assigns it to an existing manufacturer.
+     * If the manufacturer does not exist, an error message is displayed.
+     */
     public void enterCarModelData() {
         System.out.print("Enter manufacturer name: ");
         String make = scanner.nextLine();
@@ -108,6 +134,10 @@ public class ReportingIO {
         System.out.println("Car model added: " + modelName + " to manufacturer " + make);
     }
 
+    /**
+     * Displays a list of all manufacturers stored in the system.
+     * If no manufacturers exist, a message is displayed.
+     */
     public void listManufacturers() {
         if (reporting.getManufacturers().isEmpty()) {
             System.out.println("No manufacturers available.");
@@ -120,6 +150,10 @@ public class ReportingIO {
         }
     }
 
+    /**
+     * Displays all car models associated with a specific manufacturer.
+     * If the manufacturer does not exist, an error message is displayed.
+     */
     public void listCarModelsByManufacturer() {
         System.out.print("Enter manufacturer name: ");
         String make = scanner.nextLine();
@@ -149,6 +183,11 @@ public class ReportingIO {
         }
     }
 
+    /**
+     * Generates various reports, including the most expensive car sold,
+     * the manufacturer with the highest revenue for a given car type,
+     * and car models above a given price.
+     */
     public void generateReports() {
         System.out.println("\nReport Options:");
         System.out.println("1. Most expensive car sold");
