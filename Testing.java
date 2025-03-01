@@ -19,6 +19,9 @@ public class Testing {
             System.out.println("- " + m.getMake());
         }
 
-
+        System.out.println("\n Test 4 Passed: Listing Car Models for Toyota");
+        for (CarModel c : toyota.getCarModels()) {
+            System.out.println("- " + c.getName() + " (£" + c.getSalesPrice() + ", " + c.getType() + ")");
+        }
     }
 }
