@@ -26,7 +26,12 @@ public class Reporting {
     public Manufacturer getManufacturerWithHighestRevenue(String carType) {
         Manufacturer topManufacturer = null;
         double highestRevenue = 0.0;
+
+        for (int i = 0; i < manufacturers.size(); i++) {
+            double revenue = manufacturers.get(i).getTotalRevenue(carType);
+        }
     }
+
 
 
 
