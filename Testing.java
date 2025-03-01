@@ -30,5 +30,12 @@ public class Testing {
         } else {
             System.out.println("\n Test 5 Failed: No cars found.");
         }
+
+        Manufacturer topManufacturer = reporting.getManufacturerWithHighestRevenue("saloon");
+        if (topManufacturer != null) {
+            System.out.println("\n Test 6 Passed: Top Manufacturer: " + topManufacturer.getMake());
+        } else {
+            System.out.println("\n Test 6 Failed: No manufacturers found for this car type.");
+        }
     }
 }
