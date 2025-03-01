@@ -148,6 +148,16 @@ public class ReportingIO {
         }
     }
 
+    public void generateReports() {
+        System.out.println("\nReport Options:");
+        System.out.println("1. Most expensive car sold");
+        System.out.println("2. Manufacturer with highest revenue for a given car type");
+        System.out.println("3. All car models above a certain price");
+        System.out.print("Choose an option: ");
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+    }
 
 
 
