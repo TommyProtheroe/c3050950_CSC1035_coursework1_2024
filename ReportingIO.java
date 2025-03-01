@@ -34,7 +34,23 @@ public class ReportingIO {
 
     public void handleMenuChoice(int choice) {
         switch (choice) {
+            case 1:
+                enterManufacturerData();
+                break;
+            case 2:
+                enterCarModelData();
+                break;
+            case 3:
+                listManufacturers();
+                break;
+            case 4:
+                listCarModelsByManufacturer();
+                break;
+            case 5:
+                generateReports();
+                break;
         }
     }
+
 
 }
