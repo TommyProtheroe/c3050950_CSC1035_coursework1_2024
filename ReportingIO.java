@@ -64,6 +64,8 @@ public class ReportingIO {
 
         Manufacturer manufacturer = new Manufacturer(make);
         reporting.getManufacturers().add(manufacturer);
+
+        System.out.println("Manufacturer added: " + make);
     }
 
 
