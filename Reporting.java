@@ -8,4 +8,9 @@ public class Reporting {
         return manufacturers;
     }
 
+    public CarModel getMostExpensiveCarSold() {
+        CarModel mostExpensive = null;
+    }
+
+
 }
