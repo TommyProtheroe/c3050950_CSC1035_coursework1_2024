@@ -10,7 +10,12 @@ public class Reporting {
 
     public CarModel getMostExpensiveCarSold() {
         CarModel mostExpensive = null;
+
+        for (int i = 0; i < manufacturers.size(); i++) {
+            CarModel expensiveCar = manufacturers.get(i).getMostExpensiveCar();
+        }
     }
+
 
 
 }
