@@ -4,12 +4,12 @@ public class ReportingIO {
     private Reporting reporting = new Reporting();
     private Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Method must be inside the class
         ReportingIO reportingIO = new ReportingIO();
         reportingIO.runMenu();
     }
 
-    public void runMenu() {
+    public void runMenu() { // Method must also be inside the class
         while (true) {
             System.out.println("\nCar Investor Reporting System");
             System.out.println("1. Enter Manufacturer Data");
@@ -21,12 +21,14 @@ public class ReportingIO {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // Clear newline character
+
+            if (choice == 6) {
+                System.out.println("Exiting program...");
+                break;
+            }
+
+            handleMenuChoice(choice);
         }
     }
-
 }
-
-
-
-
