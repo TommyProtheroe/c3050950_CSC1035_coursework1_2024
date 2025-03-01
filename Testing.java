@@ -23,5 +23,12 @@ public class Testing {
         for (CarModel c : toyota.getCarModels()) {
             System.out.println("- " + c.getName() + " (£" + c.getSalesPrice() + ", " + c.getType() + ")");
         }
+
+        CarModel expensiveCar = reporting.getMostExpensiveCarSold();
+        if (expensiveCar != null) {
+            System.out.println("\n Test 5 Passed: Most Expensive Car Sold: " + expensiveCar.getName());
+        } else {
+            System.out.println("\n Test 5 Failed: No cars found.");
+        }
     }
 }
