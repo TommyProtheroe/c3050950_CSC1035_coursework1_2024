@@ -84,7 +84,29 @@ public class ReportingIO {
             System.out.println("Manufacturer not found.");
             return;
         }
+
+        System.out.print("Enter car model name: ");
+        String modelName = scanner.nextLine();
+
+        System.out.print("Enter car weight (kg): ");
+        double weight = scanner.nextDouble();
+
+        System.out.print("Enter sales price (£): ");
+        double salesPrice = scanner.nextDouble();
+
+        System.out.print("Enter number sold: ");
+        int numberSold = scanner.nextInt();
+        scanner.nextLine(); // Clear newline character
+
+        System.out.print("Enter car type (hatchback, saloon, estate): ");
+        String type = scanner.nextLine();
+
+        CarModel carModel = new CarModel(modelName, weight, salesPrice, numberSold, type);
+        manufacturer.getCarModels().add(carModel);
+
+        System.out.println("Car model added: " + modelName + " to manufacturer " + make);
     }
+
 
 
 
