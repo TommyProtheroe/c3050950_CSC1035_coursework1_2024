@@ -13,9 +13,15 @@ public class Reporting {
 
         for (int i = 0; i < manufacturers.size(); i++) {
             CarModel expensiveCar = manufacturers.get(i).getMostExpensiveCar();
-        }
-    }
 
+            if (expensiveCar != null) {
+                if (mostExpensive == null || expensiveCar.getSalesPrice() > mostExpensive.getSalesPrice()) {
+                    mostExpensive = expensiveCar;
+                }
+            }
+        }
+        return mostExpensive;
+    }
 
 
 }
