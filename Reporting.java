@@ -42,9 +42,11 @@ public class Reporting {
         List<CarModel> expensiveCars = new ArrayList<>();
 
         for (int i = 0; i < manufacturers.size(); i++) {
-            List<CarModel> manufacturerCars = manufacturers.get(i).getCarModelsAbovePrice(minPrice);
+            expensiveCars.addAll(manufacturers.get(i).getCarModelsAbovePrice(minPrice));
         }
+        return expensiveCars;
     }
+
 
 
 
