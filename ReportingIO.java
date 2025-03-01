@@ -112,7 +112,10 @@ public class ReportingIO {
             System.out.println("No manufacturers available.");
             return;
         }
+
+        System.out.println("\nList of Manufacturers:");
     }
+
 
 
 
