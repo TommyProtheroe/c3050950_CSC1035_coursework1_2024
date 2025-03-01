@@ -34,7 +34,13 @@ public class Manufacturer {
 
     public double getTotalRevenue(String carType) {
         double totalRevenue = 0.0;
+
+        for (int i = 0; i < carModels.size(); i++) {
+            if (carModels.get(i).getType().equals(carType)) {
+            }
+        }
     }
+
 
 
 }
